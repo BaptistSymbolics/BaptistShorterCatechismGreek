@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+
+% Page geometry
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Font setup
+\usepackage{fontspec}
+\setmainfont[
+  Path=./fonts/,
+  UprightFont=EBGaramond12-Regular.otf,
+  ItalicFont=EBGaramond12-Italic.otf
+]{EB Garamond}
+
+% Language support
+\usepackage{polyglossia}
+\setdefaultlanguage{greek}
+\setotherlanguage{english}
+
+% Spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Colors
+\usepackage{xcolor}
+
+% Section formatting
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\titleformat{\section}{\LARGE\bfseries\color[RGB]{231, 76, 60}}{}{0em}{}
+\titlespacing*{\section}{0pt}{24pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
+\titleformat{\subsection}{\large\bfseries\color{black}}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{12pt plus 2pt minus 2pt}{6pt plus 1pt minus 1pt}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R]{Βαπτιστική Συντομότερη Κατήχηση}
+\fancyhead[L]{\thepage}
+\fancyfoot{}
+
+% TOC formatting
+\usepackage{tocloft}
+\setcounter{tocdepth}{1}
+\setlength{\cftbeforesecskip}{6pt}
+\renewcommand{\cftsecfont}{\bfseries}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  linktoc=all,
+  bookmarksnumbered=true,
+  bookmarksopen=true
+}
+\usepackage{bookmark}
+
+% Reference boxes
+\usepackage{multicol}
+
+% Custom reference box environment
+\newsavebox{\refboxcontent}
+\newenvironment{refbox}{%
+  \begin{lrbox}{\refboxcontent}%
+  \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule}%
+}{%
+  \end{minipage}%
+  \end{lrbox}%
+  \vspace{10pt}%
+  \noindent\fcolorbox{blue!20}{blue!5}{\usebox{\refboxcontent}}%
+  \vspace{10pt}%
+}
+
+% Pandoc-required definitions
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+\begin{document}
+
+$if(title)$
+\title{$title$$if(subtitle)$\\[0.5em]\large $subtitle$$endif$}
+\maketitle
+$endif$
+
+\newpage
+
+$body$
+
+\end{document}
