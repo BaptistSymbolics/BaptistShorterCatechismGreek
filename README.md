@@ -1,6 +1,6 @@
 # Βαπτιστική Συντομότερη Κατήχηση — Baptist Shorter Catechism (Modern Greek)
 
-> **Work in Progress** — This translation is under active development. Contributions, corrections, and feedback are welcome via [GitHub Issues](https://github.com/BaptistSymbolics/BaptistShorterCatechismGreek/issues).
+> **Beta (v0.9.0)** — This translation is under active review. Text may change before the 1.0 release. Feedback and corrections are welcome via [GitHub Issues](https://github.com/BaptistSymbolics/BaptistShorterCatechismGreek/issues), especially from native Greek speakers.
 
 ## Downloads
 
@@ -18,8 +18,9 @@ The English source is the 1813 Charleston edition with conservative modernizatio
 
 ## Translation Status
 
-- 114 questions total
-- Translation in progress
+- 114 questions — all translated
+- Register: liturgical demotic (δημοτική), reviewed against the Modern Greek Bible (2009, Bible Society of Greece)
+- Bible verse references remain in English
 
 ## TOML Structure
 
@@ -27,10 +28,10 @@ Each question is a separate TOML file in `src/`. The format uses `[[sections]]` 
 
 ```toml
 id = "1"
-question = "Ποιο είναι το πρώτο και ανώτατο ον;"
+question = "Ποιος είναι ο πρώτος και ο υπέρτατος;"
 
 [[sections]]
-text = "Ο Θεός είναι το πρώτο και ανώτατο ον."
+text = "Ο Θεός είναι ο πρώτος και ο υπέρτατος."
 verses = "Isaiah 44:6; 48:12; Psalms 97:9"
 ```
 
