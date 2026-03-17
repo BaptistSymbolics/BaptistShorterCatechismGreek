@@ -1,6 +1,6 @@
 id = "50"
-question = "Which is the first commandment?"
+question = "Ποια είναι η πρώτη εντολή;"
 
 [[sections]]
-text = "The first commandment is, Thou shalt have no other gods before me."
+text = "Η πρώτη εντολή είναι: Δεν θα έχεις άλλους θεούς ενώπιόν μου."
 verses = "Exodus 20:3"
