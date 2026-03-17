@@ -27,6 +27,8 @@ venv/
 # Claude Code
 .claude/
 
-# Translation script and logs
+# Translation and review scripts and logs
 translate.sh
+review.sh
 logs/
+review-diffs/
